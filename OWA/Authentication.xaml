@@ -1,0 +1,32 @@
+﻿<Window x:Class="OWA.Authentication"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OWA"
+        mc:Ignorable="d"
+        Title="Authentication" Height="163" Width="216" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="61*"/>
+            <ColumnDefinition Width="154*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Account:" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <TextBlock x:Name="UIAccount" Text="account@account.com" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <TextBlock Text="Code:" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <TextBox x:Name="UICode" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Width="120" />
+
+        <Button x:Name="UISubmit" Content="Submit" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="28" Width="70" Margin="0, 0, 75, 0" IsDefault="True" Click="UISubmit_Click" />
+        <Button x:Name="UICancel" Content="Cancel" Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="28" Width="70" IsCancel="True" Click="UICancel_Click" />
+    </Grid>
+</Window>

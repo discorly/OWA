@@ -1,0 +1,44 @@
+﻿<Window x:Class="OWA.AddAccount"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OWA"
+        mc:Ignorable="d"
+        Title="Add Account" Height="234" Width="230" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Account Name -->
+        <TextBlock Text="Account name:" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        <TextBox x:Name="uiAccountName" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Width="110" />
+
+        <!-- Password -->
+        <TextBlock Text="Password:" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <PasswordBox x:Name="uiPassword" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Width="110"/>
+
+        <!-- Region -->
+        <TextBlock Text="Region:" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" />
+        <ComboBox x:Name="uiRegion" Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Width="56">
+            <ComboBoxItem Content="US" IsSelected="True"/>
+            <ComboBoxItem Content="EU"/>
+        </ComboBox>
+
+        <!-- Buttons -->
+        <Button x:Name="bSave" Content="Save" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="85" Height="28" Margin="0, 0, 90, 10" Click="bAddAccount_Click" IsDefault="True" />
+        <Button x:Name="bCancel" Content="Cancel" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Width="85" Height="28" Margin="0, 0, 0, 10" IsCancel="True" Click="bCancel_Click"/>
+    </Grid>
+</Window>
